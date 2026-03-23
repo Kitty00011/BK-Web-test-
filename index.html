@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Word 文件下载示例</title>
+    <title>AD7745 规格书下载</title>
     <style>
-        /* 简单的样式美化 */
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
@@ -13,58 +12,77 @@
             align-items: center;
             height: 100vh;
             background-color: #f4f4f9;
+            margin: 0;
         }
         .download-card {
             background: white;
-            padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             text-align: center;
+            max-width: 400px;
+            width: 90%;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        p {
+            color: #666;
+            margin-bottom: 25px;
+            line-height: 1.5;
         }
         .btn-download {
             display: inline-flex;
             align-items: center;
-            background-color: #2b5797; /* Word 蓝色 */
+            justify-content: center;
+            background-color: #d9534f; /* PDF 红色 */
             color: white;
-            padding: 12px 24px;
+            padding: 14px 28px;
             text-decoration: none;
-            border-radius: 5px;
+            border-radius: 6px;
             font-weight: bold;
-            transition: background-color 0.3s;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
         }
         .btn-download:hover {
-            background-color: #1e3f6f;
+            background-color: #c9302c;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
         }
         .icon {
             margin-right: 10px;
-            font-size: 1.2em;
+            font-size: 1.4em;
         }
         .file-info {
-            margin-top: 10px;
-            font-size: 0.9em;
-            color: #666;
+            margin-top: 20px;
+            font-size: 0.85em;
+            color: #888;
+            background: #f9f9f9;
+            padding: 8px;
+            border-radius: 4px;
         }
     </style>
 </head>
 <body>
 
     <div class="download-card">
-        <h2>下载项目报告</h2>
-        <p>点击下方按钮下载最新的PDF文档。</p>
+        <!-- 标题修正 -->
+        <h2>AD7745 芯片规格书</h2>
+        <p>点击下方按钮下载最新的技术规格文档 (PDF 格式)。</p>
         
-        <!-- 核心下载代码开始 -->
         <!-- 
-          href: 文件的实际路径 (可以是相对路径如 ./files/report.docx，也可以是绝对网址)
-          download: 告诉浏览器直接下载而不是打开。
-                    值可以是文件名，用户下载时会重命名为该名字 (例如: 我的报告.docx)
+           核心修改点：
+           1. href="spec.pdf" -> 对应你在 GitHub 上重命名后的简单文件名
+           2. download="..." -> 这里写用户下载后看到的文件名（可以是中文）
         -->
-        <a href="C468936_ADC-DAC-专用型_AD7745ARUZ_规格书_WJ231470.PDF" download="C468936_ADC-DAC-专用型_AD7745ARUZ_规格书_WJ231470.pdf" class="btn-download">
-            <span class="icon">📄</span> 下载 Word 文档
+        <a href="spec.pdf" download="AD7745ARUZ_规格书_中文版.pdf" class="btn-download">
+            <span class="icon">📄</span> 立即下载 PDF
         </a>
-        <!-- 核心下载代码结束 -->
 
         <div class="file-info">
-            文件格式：.docx | 大小：约 2.5 MB
+            文件格式：PDF | 适用型号：AD7745ARUZ
         </div>
     </div>
 
