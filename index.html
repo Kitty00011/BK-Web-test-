@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word 文件下载示例</title>
+    <style>
+        /* 简单的样式美化 */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f9;
+        }
+        .download-card {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .btn-download {
+            display: inline-flex;
+            align-items: center;
+            background-color: #2b5797; /* Word 蓝色 */
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        .btn-download:hover {
+            background-color: #1e3f6f;
+        }
+        .icon {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+        .file-info {
+            margin-top: 10px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="download-card">
+        <h2>下载项目报告</h2>
+        <p>点击下方按钮下载最新的PDF文档。</p>
+        
+        <!-- 核心下载代码开始 -->
+        <!-- 
+          href: 文件的实际路径 (可以是相对路径如 ./files/report.docx，也可以是绝对网址)
+          download: 告诉浏览器直接下载而不是打开。
+                    值可以是文件名，用户下载时会重命名为该名字 (例如: 我的报告.docx)
+        -->
+        <a href="D:\Desktop\工作任务二：仿AD7745软件的上位机设计\C468936_ADC-DAC-专用型_AD7745ARUZ_规格书_WJ231470.PDF" download="C468936_ADC-DAC-专用型_AD7745ARUZ_规格书_WJ231470.pdf" class="btn-download">
+            <span class="icon">📄</span> 下载 Word 文档
+        </a>
+        <!-- 核心下载代码结束 -->
+
+        <div class="file-info">
+            文件格式：.docx | 大小：约 2.5 MB
+        </div>
+    </div>
+
+</body>
+</html>
